@@ -4,7 +4,6 @@
     password: '$6$YtIlLqKGb7$U4Xb3rAxc9mvxJzaxPGToHPsN5ZtAeTx9TE32tnO1K4CGzvAD.6a22EvYi9EkI2PjlC7Ofa7SwX6cEKTiuw3x0'
     groups:
       - docker
-      - sudo
     state: present
     shell: /bin/bash
     system: no
