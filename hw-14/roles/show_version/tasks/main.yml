@@ -1,4 +1,4 @@
-- name: Check NGINX configs
+- name: Check NGINX version
   shell: "/usr/sbin/nginx -v"
   register: nginx_version
 
