@@ -1,0 +1,7 @@
+- name: Check NGINX configs
+  shell: "/usr/sbin/nginx -v"
+  register: nginx_version
+
+- name: NGINX version
+  debug:
+    msg: "{{ nginx_version.stdout }}"

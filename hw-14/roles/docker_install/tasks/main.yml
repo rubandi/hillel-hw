@@ -1,0 +1,26 @@
+- name: Add Docker GPG apt Key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+- name: ensure the repository is configured
+  apt_repository:
+    repo: 'deb https://download.docker.com/linux/ubuntu focal stable'
+    state: present
+  become: yes
+
+- name: ensure docker is installed
+  apt:
+    pkg:
+    - docker-ce
+    - docker-ce-cli
+    - containerd.io
+    - docker-compose-plugin
+    update_cache: yes
+  become: yes
+
+- name: ensure docker is running
+  service:
+    name: docker
+    state: started
+    enabled: yes
