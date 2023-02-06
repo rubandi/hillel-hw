@@ -4,4 +4,4 @@
 
 - name: NGINX version
   debug:
-    msg: "{{ nginx_version }}"
+    msg: "{{ nginx_version.stderr }}"
