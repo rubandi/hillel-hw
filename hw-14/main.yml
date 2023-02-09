@@ -1,0 +1,21 @@
+- hosts: ALL
+  user: ubuntu
+  become: true
+  become_method: sudo
+  gather_facts: no
+  tasks:
+
+  - include_role:
+      name: base
+
+  - include_role:
+      name: docker_install
+
+  - include_role:
+      name: nginx_install
+
+  - include_role:
+      name: create_user
+
+  - include_role:
+      name: show_version

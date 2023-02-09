@@ -1,0 +1,8 @@
+- name: install useful tools
+  apt: 
+    pkg: 
+    - mc
+    - htop 
+    update_cache: yes
+    force_apt_get: yes
+  become: yes
